@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TxBxResultado = new System.Windows.Forms.TextBox();
             this.btn1 = new System.Windows.Forms.Button();
             this.btnPunto = new System.Windows.Forms.Button();
@@ -51,14 +52,14 @@
             // 
             // TxBxResultado
             // 
+            this.TxBxResultado.Enabled = false;
             this.TxBxResultado.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxBxResultado.Location = new System.Drawing.Point(12, 12);
             this.TxBxResultado.Name = "TxBxResultado";
             this.TxBxResultado.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TxBxResultado.Size = new System.Drawing.Size(237, 38);
-            this.TxBxResultado.TabIndex = 0;
+            this.TxBxResultado.TabIndex = 18;
             this.TxBxResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TxBxResultado.TextChanged += new System.EventHandler(this.tbDisplay_TextChanged);
             // 
             // btn1
             // 
@@ -95,10 +96,10 @@
             this.btnIgual.Location = new System.Drawing.Point(192, 211);
             this.btnIgual.Name = "btnIgual";
             this.btnIgual.Size = new System.Drawing.Size(54, 96);
-            this.btnIgual.TabIndex = 18;
+            this.btnIgual.TabIndex = 0;
             this.btnIgual.Text = "=";
             this.btnIgual.UseVisualStyleBackColor = true;
-            this.btnIgual.Click += new System.EventHandler(this.button16_Click);
+            this.btnIgual.Click += new System.EventHandler(this.btnIgual_Click);
             // 
             // btnResta
             // 
@@ -265,8 +266,11 @@
             this.Controls.Add(this.btnPunto);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.TxBxResultado);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "CALCULADORA";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -290,9 +294,9 @@
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button btnMultiplicacion;
         private System.Windows.Forms.Button btnTodo;
-        private System.Windows.Forms.Button btnDivision;
         private System.Windows.Forms.Button btnBorrar;
         public System.Windows.Forms.TextBox TxBxResultado;
+        public System.Windows.Forms.Button btnDivision;
     }
 }
 
